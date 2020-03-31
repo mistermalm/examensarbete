@@ -1,0 +1,234 @@
+@import 'config';
+@import 'utilities';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid $primary-color;
+
+  ul {
+    display: flex;
+  }
+
+  i {
+    color: $primary-color;
+  }
+
+  a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.23rem;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+
+  a > span.logo-primary-color {
+    color: $primary-color;
+  }
+
+  a > span.logo-secondary-color {
+    color: #fff;
+  }
+
+  &:hover {
+    color: primary-color;
+  }
+  &-logo {
+    font-family: $primary-heading-font;
+    font-weight: $primary-heading-semi-bold;
+  }
+}
+
+.alert-success,
+.alert-danger {
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 25px;
+}
+
+.alert-danger {
+  background-color: #91221a;
+}
+.alert-success {
+  background-color: #40bd40;
+}
+
+/* Landing */
+.landing {
+  position: relative;
+  background-image: url(./img/person.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 70px);
+  &-inner {
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &-section {
+    margin-top: 220px;
+    width: 100%;
+  }
+}
+
+/* Forms **/
+
+.login,
+.register,
+.settings {
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: $light-color;
+
+  h1 {
+    margin-top: -70px;
+    color: $primary-color;
+  }
+
+  form.form {
+    text-align: center;
+  }
+
+  input.name,
+  input.email,
+  input.password {
+    border: none;
+    border-radius: 25px;
+    text-indent: 10px;
+    padding: 8px;
+  }
+
+  .select-settings {
+    border: none;
+    text-indent: 8px;
+    padding: 8px;
+  }
+
+  input.email:focus,
+  input.password:focus,
+  .select-settings:focus {
+    outline: none;
+  }
+
+  div.form-group {
+    padding-bottom: 15px;
+  }
+  .login-btn,
+  .register-btn,
+  .create-profile-btn,
+  .save-settings-btn,
+  .delete-account-btn {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .delete-account-btn {
+    margin-top: 10vh;
+    background-color: darkred;
+  }
+}
+
+/* Settings **/
+.flights-link {
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+/* Weather **/
+#root:nth-child(2) {
+  margin-top: 70px;
+}
+.destination {
+  display: flex;
+  flex-direction: column;
+  text-indent: 30px;
+  font-size: 14px;
+  background-color: #dddddd;
+}
+
+.destination-row ul {
+  height: 64px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: #e2dddd;
+}
+
+.destination-row li:nth-child(1) {
+  width: 20%;
+}
+.destination-row li:nth-child(2) {
+  width: 15%;
+  text-indent: 0;
+}
+.destination-row li:nth-child(3) {
+  width: 45%;
+}
+.destination-row li:nth-child(4) {
+  width: 20%;
+  text-indent: 0px;
+}
+
+// MEDIA QUERIES
+span.hide-mobile {
+  display: none;
+}
